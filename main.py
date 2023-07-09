@@ -13,6 +13,7 @@ class Combust(App):
         self.window.cols = 1
         self.window.size_hint = (0.4, 0.3)
         self.window.pos_hint = {"center_x": 0.5, "center_y": 0.5}
+        
 
         return self.window
 
