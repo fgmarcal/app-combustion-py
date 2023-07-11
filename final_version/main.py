@@ -71,7 +71,8 @@ class CombustApp(App):
         calculate_button = Button(text='Calcular', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#46244C")
         calculate_button.bind(on_release=self.calculate)
         layout.add_widget(calculate_button)
-
+        
+        layout.add_widget(Label(text="Desenvolvido por Felipe Garcia Marçal - v1.0", font_size='10sp', color="#C74B50"))
 
         return layout
 
@@ -87,8 +88,7 @@ class CombustApp(App):
             input_value = locale.atof(self.input_text.text)
             fuel = self.selected_fuel_label.text
             option = self.selected_option
-            result = ''
-            popup = Popup(title="Resultado", content=Label(text=result), size_hint=(None, None), size=(400, 400))
+
             #fuel selection - bagasse
             if fuel == "Bagaço" and option == "Excesso de ar":
                 return_co2 = interpolate(bagasse.air_excess, bagasse.co2, input_value)
