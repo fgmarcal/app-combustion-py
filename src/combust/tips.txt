@@ -1,2 +1,3 @@
 https://www.geeksforgeeks.org/python-rounding-button-corners-in-kivy/
 
+https://kivy.org/doc/stable/api-kivy.uix.label.html
