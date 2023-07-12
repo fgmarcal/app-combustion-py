@@ -6,6 +6,7 @@ from kivy.uix.togglebutton import ToggleButton
 from kivy.uix.dropdown import DropDown
 from kivy.uix.textinput import TextInput
 from kivy.core.window import Window
+from kivy.uix.image import Image
 from kivy.utils import get_color_from_hex
 from kivy.core.text import LabelBase
 from kivy.uix.popup import Popup
@@ -18,6 +19,7 @@ import oil
 import oxygen
 import locale
 
+__version__ = '1.0'
 locale.setlocale(locale.LC_ALL, '')
 class CombustApp(App):
 
@@ -26,8 +28,8 @@ class CombustApp(App):
         layout = BoxLayout(orientation='vertical', size_hint=(0.8, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         Window.clearcolor = (get_color_from_hex('#D49B54'))
 
-        header_label = Label(text='COMBUSTÃO', font_name='Anton', font_size='50sp', color="#46244C")
-        layout.add_widget(header_label)
+        header_image = Image(source="flame.png", fit_mode="contain")
+        layout.add_widget(header_image)
 
         menu_button = Button(text='Selecione o Combustível', font_name='Anton', font_size='20sp', size_hint=(1, 0.8) , background_color="#712B75")
         menu_button.bind(on_release=self.show_menu)
@@ -72,7 +74,7 @@ class CombustApp(App):
         calculate_button.bind(on_release=self.calculate)
         layout.add_widget(calculate_button)
         
-        layout.add_widget(Label(text="Desenvolvido por Felipe Garcia Marçal - v1.0", font_size='10sp', color="#C74B50"))
+        layout.add_widget(Label(text=f"Desenvolvido por Felipe Garcia Marçal - v{__version__}", font_size='10sp', color="#C74B50"))
 
         return layout
 
