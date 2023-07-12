@@ -1,3 +1,4 @@
+import kivy
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
@@ -27,7 +28,7 @@ class CombustApp(App):
     def build(self):
         super().build()
         layout = BoxLayout(orientation='vertical', size_hint=(0.8, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5})
-        Window.clearcolor = (get_color_from_hex('#D49B54'))
+        Window.clearcolor = (0.25, 0.25, 0.25)
 
         header_image = Image(source="flame.png", fit_mode="contain")
         layout.add_widget(header_image)
