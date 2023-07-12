@@ -19,6 +19,7 @@ import oil
 import oxygen
 import locale
 
+kivy.require('1.9.0')
 __version__ = '1.0'
 locale.setlocale(locale.LC_ALL, '')
 class CombustApp(App):
