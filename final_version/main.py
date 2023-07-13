@@ -19,16 +19,18 @@ import natural_gas
 import oil
 import oxygen
 import locale
+import numpy as np
 
-kivy.require('1.9.0')
-__version__ = '1.0'
+kivy.require('2.0.0')
+
+__version__ = '1.0.6'
 locale.setlocale(locale.LC_ALL, '')
 class CombustApp(App):
 
     def build(self):
         super().build()
         layout = BoxLayout(orientation='vertical', size_hint=(0.8, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5})
-        Window.clearcolor = (0.25, 0.25, 0.25)
+        Window.clearcolor = (0.565, 0.56, 1)
 
         header_image = Image(source="flame.png", fit_mode="contain")
         layout.add_widget(header_image)
@@ -83,6 +85,10 @@ class CombustApp(App):
 
     def show_menu(self, button):
         self.dropdown.open(button)
+
+
+    def on_dropdown_select(self, value):
+        self.selected_fuel_label.text = value
 
     def on_toggle_button(self, button):
         self.selected_option = button.text
@@ -191,15 +197,7 @@ class CombustApp(App):
         except:
             popup = Popup(title="Erro ao inserir valores", content=Label(text="ERRO\n\nVerifique se o valor inserido está correto"), size_hint=(None, None), size=(400, 400))
             popup.open()
-
-    def on_start(self):
-        self.selected_option = 'Excesso de ar'
     
-    def clear_selection(self):
-        pass
-
-    def on_dropdown_select(self, value):
-        self.selected_fuel_label.text = value
     
 LabelBase.register(name='Anton',
                 fn_regular='Anton-Regular.ttf')
