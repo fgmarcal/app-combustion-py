@@ -23,7 +23,7 @@ import numpy as np
 
 kivy.require('2.0.0')
 
-__version__ = '1.0.8'
+__version__ = '1.0.9'
 locale.setlocale(locale.LC_ALL, '')
 class CombustApp(App):
 
@@ -74,16 +74,16 @@ class CombustApp(App):
         self.blank_space_2 = Label(text='')
         layout.add_widget(self.blank_space_2)
 
-        graphic_button = Button(text='Gráfico', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#890F0D")
-        graphic_button.bind(on_press=self.popup_graphic)
-        layout.add_widget(graphic_button)
-
-        self.blank_space_2 = Label(text='')
-        layout.add_widget(self.blank_space_2)
-
-        calculate_button = Button(text='Calcular', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#46244C")
+        calculate_button = Button(text='Calcular', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#C74B50")
         calculate_button.bind(on_release=self.calculate)
         layout.add_widget(calculate_button)
+
+        self.blank_space_3 = Label(text='')
+        layout.add_widget(self.blank_space_3)
+
+        graphic_button = Button(text='Gráfico', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#46244C")
+        graphic_button.bind(on_press=self.popup_graphic)
+        layout.add_widget(graphic_button)
 
         
         
@@ -113,7 +113,7 @@ class CombustApp(App):
         return popup.open()
     
     def popup_graphic(self, instance):
-        graphic_button = Popup(title="", content=Image(source="grafico.png", fit_mode="fill"), size_hint=(0.6, 0.6), size=(600, 600), background_color=(0,0,0,1))
+        graphic_button = Popup(title="", content=Image(source="grafico.png", fit_mode="fill"), size_hint=(0.7, 0.6), size=(600, 600), background_color=(0,0,0,1))
         return graphic_button.open()
     
     def return_result_txt(self,fuel, excess, co2, o2):
