@@ -23,7 +23,7 @@ import numpy as np
 
 kivy.require('2.0.0')
 
-__version__ = '1.0.9'
+__version__ = '1.0.10'
 locale.setlocale(locale.LC_ALL, '')
 class CombustApp(App):
 
