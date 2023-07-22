@@ -1,4 +1,3 @@
-
 # Combustion App Project
 
 - Projeto **Combustion App** criado com Python e Kivy para Android.
