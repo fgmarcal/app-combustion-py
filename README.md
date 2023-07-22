@@ -6,7 +6,7 @@
 
 - Público-alvo: Engenheiros
 
-![main](https://github.com/fgmarcal/app-burn-for-boiler-py/assets/90734397/94a99423-220f-4356-bdcd-57f618299fba)
+![main]([https://github.com/fgmarcal/app-burn-for-boiler-py/assets/90734397/94a99423-220f-4356-bdcd-57f618299fba](https://raw.githubusercontent.com/fgmarcal/app-combustion-py/main/app%20play%20store%20assets/Main%20story.png))
 
 
 - Gráfico base utilizado para o cálculo
