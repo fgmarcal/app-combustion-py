@@ -6,11 +6,11 @@
 
 - Público-alvo: Engenheiros
 
-![image](https://github.com/fgmarcal/app-burn-for-boiler-py/assets/90734397/94a99423-220f-4356-bdcd-57f618299fba)
+![main](https://github.com/fgmarcal/app-burn-for-boiler-py/assets/90734397/94a99423-220f-4356-bdcd-57f618299fba)
 
 
 - Gráfico base utilizado para o cálculo
-![2](https://raw.githubusercontent.com/fgmarcal/app-burn-for-boiler-py/develop/app%20play%20store%20assets/grafico.png?token=GHSAT0AAAAAACDGVVWLNLAMLQJW5K6WCYM6ZF3Z5AQ)
+![grafico](https://github.com/fgmarcal/app-burn-for-boiler-py/assets/90734397/292475d2-b498-40aa-b9ec-97a7982f644c)
 
 
 
@@ -31,11 +31,12 @@
 ## Screenshots
 
 - Selecione o combustível utilizado, selecione o valor de entrada conhecido (ar, Co2 ou O2) e receba o valor de saída dos demais gases (ar, CO2, O2)
-![1](https://raw.githubusercontent.com/fgmarcal/app-burn-for-boiler-py/develop/app%20play%20store%20assets/10pol-1.png?token=GHSAT0AAAAAACDGVVWLZDCLD2R27GC7OG4QZF3ZYOQ)
+![1](https://github.com/fgmarcal/app-burn-for-boiler-py/assets/90734397/958b7efb-6d99-4e6d-9aac-363c899ac5e4)
 
-![2](https://raw.githubusercontent.com/fgmarcal/app-burn-for-boiler-py/develop/app%20play%20store%20assets/10pol-2.png?token=GHSAT0AAAAAACDGVVWKPHLTNKZO4ZPKIDPUZF3ZZSA)
+![2](https://github.com/fgmarcal/app-burn-for-boiler-py/assets/90734397/d42fba9d-a880-49d4-8530-7b85aa1fd0b0)
 
-![3](https://raw.githubusercontent.com/fgmarcal/app-burn-for-boiler-py/develop/app%20play%20store%20assets/10pol-3.png?token=GHSAT0AAAAAACDGVVWLEHEZE4XRMHB73OAGZF3Z3MA)
+![3](https://github.com/fgmarcal/app-burn-for-boiler-py/assets/90734397/69b636b4-d654-4a4a-8ca0-3282eee6d6cf)
 
-![4](https://raw.githubusercontent.com/fgmarcal/app-burn-for-boiler-py/develop/app%20play%20store%20assets/10pol-4.png?token=GHSAT0AAAAAACDGVVWKF5IZF533JA7IUO4EZF3Z3VQ)
+![4](https://github.com/fgmarcal/app-burn-for-boiler-py/assets/90734397/4378999e-307f-40f1-ac14-202e8001e400)
+
 
