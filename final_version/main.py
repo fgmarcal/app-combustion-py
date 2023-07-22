@@ -123,7 +123,6 @@ class CombustApp(App):
     def calculate(self, button):
         
         try:
-            # input_value = locale.atof(self.input_text.text)
             input_value = float(self.input_text.text.replace(",", "."))
             fuel = self.selected_fuel_label.text
             option = self.selected_option
