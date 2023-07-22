@@ -10,6 +10,7 @@
 
 
 - Gráfico base utilizado para o cálculo
+  
 ![grafico](https://github.com/fgmarcal/app-burn-for-boiler-py/assets/90734397/292475d2-b498-40aa-b9ec-97a7982f644c)
 
 
