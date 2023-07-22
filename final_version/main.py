@@ -49,8 +49,7 @@ class CombustApp(App):
         self.selected_fuel_label = Label(text='', font_name='Anton', font_size='30sp', color="#890F0D")
         layout.add_widget(self.selected_fuel_label)
 
-        self.blank_space_1 = Label(text='')
-        layout.add_widget(self.blank_space_1)
+        layout.add_widget(Label(text=''))
 
         self.input_text = TextInput(hint_text='Insira um valor:', font_name='Anton', font_size='19sp',
                                     multiline=False, input_type='number', size_hint=(0.5, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5})
@@ -70,26 +69,19 @@ class CombustApp(App):
         toggle_button.bind(on_press=self.on_toggle_button)
         layout.add_widget(toggle_button)
 
-        self.blank_space_2 = Label(text='')
-        layout.add_widget(self.blank_space_2)
+        layout.add_widget(Label(text=''))
 
         calculate_button = Button(text='Calcular', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#C74B50")
         calculate_button.bind(on_release=self.calculate)
         layout.add_widget(calculate_button)
 
-        self.blank_space_3 = Label(text='')
-        layout.add_widget(self.blank_space_3)
+        layout.add_widget(Label(text=''))
 
         graphic_button = Button(text='Gráfico', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#46244C")
         graphic_button.bind(on_press=self.popup_graphic)
         layout.add_widget(graphic_button)
-
-        
-        
         
         layout.add_widget(Label(text=f"Desenvolvido por Felipe Garcia Marçal - v{__version__}", font_size='11sp', color="#C74B50"))
-
-        
 
         return layout
 
