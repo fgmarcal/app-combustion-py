@@ -19,7 +19,6 @@ import natural_gas
 import oil
 import oxygen
 import locale
-import numpy as np
 
 kivy.require('2.0.0')
 
