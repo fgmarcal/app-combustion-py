@@ -4,6 +4,10 @@ bin/
 *.aab
 *.apk
 app[*]/
+*.txt
+*.keystore
+*.old
+*.Identifier
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
