@@ -8,7 +8,6 @@ from kivy.uix.dropdown import DropDown
 from kivy.uix.textinput import TextInput
 from kivy.core.window import Window
 from kivy.uix.image import Image
-from kivy.utils import get_color_from_hex
 from kivy.core.text import LabelBase
 from kivy.uix.popup import Popup
 from engine import interpolate
@@ -198,7 +197,8 @@ class CombustApp(App):
                 return_co2 = interpolate(x_axis=oil.air_excess,y_axis=oil.co2, value=return_excess)
                 result = self.return_result_txt(fuel, excess=return_excess, co2=return_co2, o2=input_value)
                 self.popup_print_result(result)
-        except:
+        except Exception as err:
+            print(err)
             error_message = f"ERRO\n\nVerifique se o valor inserido está correto"
             self.popup_error(error_message)
 
