@@ -109,10 +109,6 @@ class CombustApp(App):
         graphic_button = Popup(title="", content=Image(source="grafico.png", fit_mode="fill"), size_hint=(0.7, 0.6), size=(600, 600), background_color=(0,0,0,1))
         return graphic_button.open()
     
-    def return_result_txt(self,fuel, excess, co2, o2):
-        return f"Combustível: {str(fuel)}\n\nExcesso de ar: {float(excess):.4f}\n\nCO2: {float(co2):.4f}\n\nO2: {float(o2):.4f}"
-        
-    
     def calculate(self, button):
         
         try:
@@ -120,6 +116,9 @@ class CombustApp(App):
             fuel = self.selected_fuel_label.text
             option = self.selected_option
 
+            fuel = Fuel(fuel=fuel, option=option)
+            result = fuel.return_options(input_value)
+            self.popup_print_result(result)
 
             
             # #fuel selection - bagasse
