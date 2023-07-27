@@ -27,9 +27,6 @@ LabelBase.register(name='Anton', fn_regular='Anton-Regular.ttf')
 
 class CombustApp(App):
 
-    def __init__(self):
-        super().__init__()
-
     def build(self):
 
         layout = BoxLayout(orientation='vertical', size_hint=(0.8, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5})
@@ -53,7 +50,8 @@ class CombustApp(App):
         self.selected_fuel_label = Label(text='', font_name='Anton', font_size='30sp', color="#890F0D")
         layout.add_widget(self.selected_fuel_label)
 
-        layout.add_widget(Label(text=''))
+        white_space = Label(text='')
+        layout.add_widget(white_space)
 
         self.input_text = TextInput(hint_text='Insira um valor:', font_name='Anton', font_size='19sp',
                                     multiline=False, input_type='number', size_hint=(0.5, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5})
@@ -73,13 +71,13 @@ class CombustApp(App):
         toggle_button.bind(on_press=self.on_toggle_button)
         layout.add_widget(toggle_button)
 
-        layout.add_widget(Label(text=''))
+        layout.add_widget(white_space)
 
         calculate_button = Button(text='Calcular', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#C74B50")
         calculate_button.bind(on_release=self.calculate)
         layout.add_widget(calculate_button)
 
-        layout.add_widget(Label(text=''))
+        layout.add_widget(white_space)
 
         graphic_button = Button(text='Gráfico', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#46244C")
         graphic_button.bind(on_press=self.popup_graphic)
@@ -206,7 +204,7 @@ class CombustApp(App):
             #     self.popup_print_result(result)
         except Exception as err:
             print(err)
-            error_message = f"ERRO\n\nVerifique se o valor inserido está correto"
+            error_message = "ERRO\n\nVerifique se o valor inserido está correto"
             self.popup_error(error_message)
 
     
