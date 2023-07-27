@@ -10,7 +10,7 @@ from kivy.core.window import Window
 from kivy.uix.image import Image
 from kivy.core.text import LabelBase
 from kivy.uix.popup import Popup
-from fuel import FUEL_LIST, OPTION_LIST
+from fuel import FUEL_LIST, OPTION_LIST, Fuel
 # from engine import interpolate
 # import bagasse
 # import firewood
