@@ -109,10 +109,10 @@ class CombustApp(App):
         
         try:
             input_value = float(self.input_text.text.replace(",", "."))
-            fuel = self.selected_fuel_label.text
+            selected_fuel_text = self.selected_fuel_label.text
             option = self.selected_option
 
-            fuel = Fuel(fuel=fuel, option=option)
+            fuel = Fuel(fuel=selected_fuel_text, option=option)
             result = fuel.return_options(input_value)
             self.popup_print_result(result)
 
