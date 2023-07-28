@@ -12,9 +12,9 @@ FUEL_LIST = {
     "GLP" : {"Excesso de Ar" : liquid_gas.air_excess, "CO2" : liquid_gas.co2}, 
     "Gás Natural" : {"Excesso de Ar" : natural_gas.air_excess, "CO2" : natural_gas.co2}, 
     "Óleo Pesado" : {"Excesso de Ar" : oil.air_excess, "CO2" : oil.co2},
-}
+    }
 
-OPTION_LIST = ["Excesso de ar", "CO2", "O2"]
+OPTION_LIST = ["Excesso de Ar", "CO2", "O2"]
 
 class Fuel:
 
@@ -30,19 +30,17 @@ class Fuel:
     def return_options(self, value):
         """returns the option based on fuel selection"""
         if self.option == OPTION_LIST[0]:
-            return_co2 = interpolate(x_axis=FUEL_LIST[self.fuel]["Excesso de ar"], y_axis=FUEL_LIST[self.fuel]["CO2"], value=value)
+            return_co2 = interpolate(x_axis=FUEL_LIST[self.fuel].get(str(OPTION_LIST[0])), y_axis=FUEL_LIST[self.fuel].get(str(OPTION_LIST[1])), value=value)
             return_o2 = interpolate(x_axis=oxygen.air_excess,y_axis=oxygen.o2, value=value)
             result = self.return_result_txt(self.fuel, value, return_co2, return_o2)
             return result
         elif self.option == OPTION_LIST[1]:
-            return_excess = interpolate(x_axis=FUEL_LIST[self.fuel]["CO2"], y_axis=FUEL_LIST[self.fuel]["Excesso de ar"], value=value)
-            return_o2 = interpolate(x_axis=oxygen.air_excess,y_axis=oxygen.o2, value=value)
+            return_excess = interpolate(x_axis=FUEL_LIST[self.fuel].get(str(OPTION_LIST[1])), y_axis=FUEL_LIST[self.fuel].get(str(OPTION_LIST[0])), value=value)
+            return_o2 = interpolate(x_axis=oxygen.air_excess,y_axis=oxygen.o2, value=return_excess)
             result = self.return_result_txt(self.fuel, return_excess, value, return_o2)
             return result
         elif self.option == OPTION_LIST[2]:
-            return_excess = interpolate(x_axis=oxygen.air_excess,y_axis=oxygen.o2, value=value)
-            return_co2 = interpolate(x_axis=FUEL_LIST[self.fuel]["Excesso de ar"], y_axis=FUEL_LIST[self.fuel]["CO2"], value=return_excess)
+            return_excess = interpolate(x_axis=oxygen.o2,y_axis=oxygen.air_excess, value=value)
+            return_co2 = interpolate(x_axis=FUEL_LIST[self.fuel].get(str(OPTION_LIST[0])), y_axis=FUEL_LIST[self.fuel].get(str(OPTION_LIST[1])), value=return_excess)
             result = self.return_result_txt(self.fuel, return_excess, return_co2, value)
             return result
-
-

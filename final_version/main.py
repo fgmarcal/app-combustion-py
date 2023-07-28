@@ -28,7 +28,7 @@ LabelBase.register(name='Anton', fn_regular='Anton-Regular.ttf')
 class CombustApp(App):
 
     def build(self):
-
+        
         layout = BoxLayout(orientation='vertical', size_hint=(0.8, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         Window.clearcolor = (0.565, 0.56, 1)
 
@@ -59,25 +59,27 @@ class CombustApp(App):
 
 
         layout.add_widget(Label(text="Selecione o tipo de entrada:", font_name='Anton', font_size='30sp', color="#C74B50"))
-        toggle_button = ToggleButton(text=OPTION_LIST[0], font_name='Anton', font_size='20sp', group='options', size_hint_y=0.5, background_color="#C2DEDC")
+        toggle_button = ToggleButton(text=str(OPTION_LIST[0]), font_name='Anton', font_size='20sp', group='options', size_hint_y=0.5, background_color="#C2DEDC")
         toggle_button.bind(on_press=self.on_toggle_button)
         layout.add_widget(toggle_button)
 
-        toggle_button = ToggleButton(text=OPTION_LIST[1], font_name='Anton', font_size='20sp', group='options', size_hint_y=0.5, background_color="#C2DEDC")
+        toggle_button = ToggleButton(text=str(OPTION_LIST[1]), font_name='Anton', font_size='20sp', group='options', size_hint_y=0.5, background_color="#C2DEDC")
         toggle_button.bind(on_press=self.on_toggle_button)
         layout.add_widget(toggle_button)
 
-        toggle_button = ToggleButton(text=OPTION_LIST[2], font_name='Anton', font_size='20sp', group='options', size_hint_y=0.5, background_color="#C2DEDC")
+        toggle_button = ToggleButton(text=str(OPTION_LIST[2]), font_name='Anton', font_size='20sp', group='options', size_hint_y=0.5, background_color="#C2DEDC")
         toggle_button.bind(on_press=self.on_toggle_button)
         layout.add_widget(toggle_button)
 
-        layout.add_widget(white_space)
+        white_space2 = Label(text='')
+        layout.add_widget(white_space2)
 
         calculate_button = Button(text='Calcular', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#C74B50")
         calculate_button.bind(on_release=self.calculate)
         layout.add_widget(calculate_button)
 
-        layout.add_widget(white_space)
+        white_space3 = Label(text='')
+        layout.add_widget(white_space3)
 
         graphic_button = Button(text='Gráfico', font_name='Anton', font_size='20sp', size_hint=(0.4, 0.8),pos_hint={'center_x': 0.5, 'center_y': 0.5},background_color="#46244C")
         graphic_button.bind(on_press=self.popup_graphic)
