@@ -21,6 +21,7 @@ LabelBase.register(name='Anton', fn_regular='Anton-Regular.ttf')
 class CombustApp(App):
 
     def build(self):
+        super().build()
         
         layout = BoxLayout(orientation='vertical', size_hint=(0.8, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         Window.clearcolor = (0.565, 0.56, 1)
