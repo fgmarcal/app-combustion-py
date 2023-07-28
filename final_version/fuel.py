@@ -22,7 +22,6 @@ class Fuel:
         self.fuel = fuel
         self.option = option
 
-#TODO 1) add fuel logic 2) test
     def return_result_txt(self,fuel, excess, co2, o2):
         """returns text for popup"""
         return f"Combustível: {str(fuel)}\n\nExcesso de ar: {float(excess):.4f}\n\nCO2: {float(co2):.4f}\n\nO2: {float(o2):.4f}"
