@@ -1,5 +1,4 @@
 import kivy
-from kivy import *
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
@@ -15,9 +14,7 @@ from fuel import FUEL_LIST, OPTION_LIST, Fuel
 
 kivy.require('2.0.0')
 
-__version__ = '1.0.11'
-
-LabelBase.register(name='Anton', fn_regular='Anton-Regular.ttf')
+__version__ = '1.0.12'
 
 class CombustApp(App):
 
@@ -123,7 +120,7 @@ class CombustApp(App):
             self.popup_error(error_message)
 
     
-    
+LabelBase.register(name='Anton', fn_regular='Anton-Regular.ttf')    
 
 
 if __name__ == '__main__':
