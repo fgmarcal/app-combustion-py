@@ -3,7 +3,7 @@
 - Projeto **Combustion App** criado com Python e Kivy para Android.
 
 - Este app executa o cálculo dos demais valores dos gases da combustão: Seja 'Excesso de Ar', CO2 ou O2
-- [versão teste - apk](https://drive.google.com/file/d/1QNW9SQ6kO5jqHR5MzoNGJVOQcOLGQ37M/view?usp=sharing)
+- [versão teste - apk](https://drive.google.com/file/d/1cvpwVlhYbSRs8iTKzigHJuW06QOFSF56/view?usp=drive_link)
 
 - Público-alvo: Engenheiros
 
